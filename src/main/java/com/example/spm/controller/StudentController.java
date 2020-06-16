@@ -78,7 +78,7 @@ public class StudentController {
      */
     @CrossOrigin
     @PostMapping(value = "delete", consumes = "application/json")
-    public int deletStudentById(@RequestBody  Student student, HttpServletResponse response) throws IOException {
+    public int deleteStudentById(@RequestBody  Student student, HttpServletResponse response) throws IOException {
         int lines = studentService.deleteStudentById(student);
         response.setHeader("Content-Type", "text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
